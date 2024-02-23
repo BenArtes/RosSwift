@@ -43,7 +43,7 @@ public struct FileLog {
             logDirectory = logFileName + thisNodeName.dropFirst()
             logFileName += thisNodeName.dropFirst() + "/\(getpid()).log"
         }
-        #elseif os(iOS) || os(tvOS) || os(watchOS)
+        #elseif os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
             // Do something else here
         #endif
 

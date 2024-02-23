@@ -1,6 +1,6 @@
 import Foundation
 
-#if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+#if os(macOS) || os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
 import CommonCrypto
 #elseif os(Linux)
 import OpenSSL
@@ -14,7 +14,7 @@ extension Data {
     /// - Returns: The requested hash output or nil if failure.
     public func hashed() -> String {
 
-        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
         let length = CC_MD5_DIGEST_LENGTH
         #elseif os(Linux)
         let length = MD5_DIGEST_LENGTH
@@ -25,7 +25,7 @@ extension Data {
         digest.withUnsafeMutableBytes { (digestBytes) in
             self.withUnsafeBytes { (messageBytes) in
                 let length = CC_LONG(messageBytes.count)
-                #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+                #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
                 CC_MD5(messageBytes.baseAddress!, length, digestBytes.bindMemory(to: UInt8.self).baseAddress!)
                 #elseif os(Linux)
                 MD5(messageBytes.baseAddress?.assumingMemoryBound(to: UInt8.self), length, digestBytes.bindMemory(to: UInt8.self).baseAddress!)
