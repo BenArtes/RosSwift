@@ -42,7 +42,7 @@ extension gazebo_msgs {
 				joint_name = String()
 				effort = Float64()
 				start_time = Time()
-				duration = Duration()
+				duration = RosDuration()
 			}
 		}
 

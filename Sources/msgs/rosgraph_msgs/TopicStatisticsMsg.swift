@@ -87,12 +87,12 @@ extension rosgraph_msgs {
 			delivered_msgs = Int32()
 			dropped_msgs = Int32()
 			traffic = Int32()
-			period_mean = Duration()
-			period_stddev = Duration()
-			period_max = Duration()
-			stamp_age_mean = Duration()
-			stamp_age_stddev = Duration()
-			stamp_age_max = Duration()
+			period_mean = RosDuration()
+			period_stddev = RosDuration()
+			period_max = RosDuration()
+			stamp_age_mean = RosDuration()
+			stamp_age_stddev = RosDuration()
+			stamp_age_max = RosDuration()
 		}
 	}
 }

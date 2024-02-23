@@ -36,7 +36,7 @@ extension trajectory_msgs {
 			transforms = [geometry_msgs.Transform]()
 			velocities = [geometry_msgs.Twist]()
 			accelerations = [geometry_msgs.Twist]()
-			time_from_start = Duration()
+			time_from_start = RosDuration()
 		}
 	}
 }

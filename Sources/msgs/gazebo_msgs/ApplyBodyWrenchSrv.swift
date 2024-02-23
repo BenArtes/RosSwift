@@ -59,7 +59,7 @@ extension gazebo_msgs {
 				reference_point = geometry_msgs.Point()
 				wrench = geometry_msgs.Wrench()
 				start_time = Time()
-				duration = Duration()
+				duration = RosDuration()
 			}
 		}
 

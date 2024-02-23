@@ -79,7 +79,7 @@ extension visualization_msgs {
 			outline_color = std_msgs.ColorRGBA()
 			filled = UInt8()
 			fill_color = std_msgs.ColorRGBA()
-			lifetime = Duration()
+			lifetime = RosDuration()
 			points = [geometry_msgs.Point]()
 			outline_colors = [std_msgs.ColorRGBA]()
 		}

@@ -40,7 +40,7 @@ extension trajectory_msgs {
 			velocities = [Float64]()
 			accelerations = [Float64]()
 			effort = [Float64]()
-			time_from_start = Duration()
+			time_from_start = RosDuration()
 		}
 	}
 }

@@ -114,7 +114,7 @@ extension visualization_msgs {
 			pose = geometry_msgs.Pose()
 			scale = geometry_msgs.Vector3()
 			color = std_msgs.ColorRGBA()
-			lifetime = Duration()
+			lifetime = RosDuration()
 			frame_locked = Bool()
 			points = [geometry_msgs.Point]()
 			colors = [std_msgs.ColorRGBA]()
