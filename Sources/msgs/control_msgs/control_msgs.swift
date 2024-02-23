@@ -4,7 +4,6 @@ import StdMsgs
 
 public enum control_msgs {
     public static let all: [String: Message.Type] = [
-        "AdmittanceControllerState": AdmittanceControllerState.self,
 		"DynamicJointState": DynamicJointState.self,
 		"GripperCommand": GripperCommand.self,
 		"InterfaceValue": InterfaceValue.self,
