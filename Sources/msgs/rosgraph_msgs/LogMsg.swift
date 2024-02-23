@@ -10,7 +10,7 @@ extension rosgraph_msgs {
 	///# Fields
 	///#
 	public struct Log: MessageWithHeader {
-		public static let md5sum: String = "97b17fb75c4448c08d1c2d36f1c485c1"
+		public static let md5sum: String = "acffd30cd6b6de30f120938c17c593fb"
 		public static let datatype = "rosgraph_msgs/Log"
 		public static let definition = """
 			##
