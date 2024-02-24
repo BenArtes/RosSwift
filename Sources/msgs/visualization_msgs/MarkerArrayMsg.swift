@@ -5,7 +5,7 @@ import StdMsgs
 extension visualization_msgs {
 
 	public struct MarkerArray: Message {
-		public static let md5sum: String = "0b27c2fa2d949b2fd8a203f3176a0d56"
+		public static let md5sum: String = "d155b9ce5188fbaf89745847fd5882d7"
 		public static let datatype = "visualization_msgs/MarkerArray"
 		public static let definition = "Marker[] markers"
 

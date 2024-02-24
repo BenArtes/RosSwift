@@ -12,7 +12,7 @@ extension visualization_msgs {
 	/// NOTE: only used for text markers
 	/// NOTE: only used for MESH_RESOURCE markers
 	public struct Marker: MessageWithHeader {
-		public static let md5sum: String = "fc60f67ee1b0328d53f32573aafeb4d9"
+		public static let md5sum: String = "4048c9de2a16f4ae8e0538085ebf1b97"
 		public static let datatype = "visualization_msgs/Marker"
 		public static let definition = """
 			# See http://www.ros.org/wiki/rviz/DisplayTypes/Marker and http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes for more information on using this message with rviz
