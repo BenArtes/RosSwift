@@ -4,15 +4,15 @@ import StdMsgs
 import file_server
 import msgs
 
-extension  {
+extension file_server {
 	public enum GetFiles: ServiceProt {
 		public static let md5sum: String = "c3cdff040217d6fd73cddf99bcd1c960"
-		public static let datatype = "/GetFiles"
+		public static let datatype = "file_server/GetFiles"
 
 	
 		public struct Request: ServiceRequestMessage {
 			public static let md5sum: String = "ae760accfe8bd01e78cec4edc336be00"
-			public static let datatype = "/GetFilesRequest"
+			public static let datatype = "file_server/GetFilesRequest"
 			public typealias ServiceType = GetFiles
 			public static let definition = "string[] file_paths"
 	
@@ -30,7 +30,7 @@ extension  {
 	
 		public struct Response: ServiceResponseMessage {
 			public static let md5sum: String = "10a280b0da6aeeecc9d2da337b711f26"
-			public static let datatype = "/GetFilesResponse"
+			public static let datatype = "file_server/GetFilesResponse"
 			public typealias ServiceType = GetFiles
 			public static let definition = "file_server/File[] files"
 	
