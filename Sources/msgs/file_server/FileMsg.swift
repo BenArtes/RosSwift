@@ -12,17 +12,17 @@ extension file_server {
 			uint8[] data
 			"""
 
-		public var name: string
-		public var data: [uint8]
+		public var name: String
+		public var data: [UInt8]
 
-		public init(name: string, data: [uint8]) {
+		public init(name: String, data: [UInt8]) {
 			self.name = name
 			self.data = data
 		}
 
 		public init() {
-			name = string()
-			data = [uint8]()
+			name = String()
+			data = [UInt8]()
 		}
 	}
 }
