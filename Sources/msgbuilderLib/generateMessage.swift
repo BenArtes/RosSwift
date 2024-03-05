@@ -84,9 +84,10 @@ extension MsgSpec {
         let constDecl = constants.map { $0.declaration(in: package) }.joined(separator: "\n\t")
         let decl = variables.map{ $0.declaration(in: package) }.joined(separator: "\n\t")
 
-        guard let md5sum = compute_md5(msg_context: context) else {
+        var md5sum = compute_md5(msg_context: context)
+        if (md5sum == nil) {
             print("Could not compute md5 for \(full_name)")
-            return nil
+            md5sum = ""
         }
 
         let arguments = variables.compactMap{$0.argument(in: package)}.joined(separator: ", ")
@@ -143,7 +144,7 @@ extension MsgSpec {
         var code = """
             \(comments)
             \tpublic struct \(name): \(messageProtocol) {
-            \t\tpublic static let md5sum: String = "\(md5sum)"
+            \t\tpublic static let md5sum: String = "\(md5sum ?? "")"
             \t\tpublic static let datatype = "\(full_name)"\(servicePart)
             \t\tpublic static let definition = \(definition)
 

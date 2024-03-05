@@ -67,9 +67,11 @@ struct SrvSpec: BaseMsg {
         let swiftMessageType = full_name.replacingOccurrences(of: "/", with: ".")
         let path = swiftMessageType.components(separatedBy: ".")
 
-        guard let md5sum = compute_md5(msg_context: context) else {
+        var md5sum = compute_md5(msg_context: context)
+        if (md5sum == nil) {
             print("Could not compute md5 for \(full_name)")
-            return nil
+//            return nil
+            md5sum = ""
         }
 
         let code = """
@@ -79,7 +81,7 @@ struct SrvSpec: BaseMsg {
 
             \(context.embed ? "extension \(path.dropLast().joined(separator: ".")) {" : "")
             \tpublic enum \(path.last!): ServiceProt {
-            \t\tpublic static let md5sum: String = "\(md5sum)"
+            \t\tpublic static let md5sum: String = "\(md5sum ?? "")"
             \t\tpublic static let datatype = "\(full_name)"
 
             \t\(req)
