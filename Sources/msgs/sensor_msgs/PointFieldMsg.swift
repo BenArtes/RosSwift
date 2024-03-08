@@ -6,7 +6,7 @@ extension sensor_msgs {
 	/// This message holds the description of one point entry in the
 	/// PointCloud2 message format.
 	public struct PointField: Message {
-		public static let md5sum: String = "633fa7ef352c25a9174af43be820c238"
+		public static let md5sum: String = "268eacb2962780ceac86cbd17e3281509"
 		public static let datatype = "sensor_msgs/PointField"
 		public static let definition = """
 			# This message holds the description of one point entry in the
